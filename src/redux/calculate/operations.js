@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://deploy-preview-2--rad-vacherin-853b41.netlify.app';
+axios.defaults.baseURL = 'https://rad-vacherin-853b41.netlify.app';
 
 //Guarda en la base de datos la información de la calculadora
 export const calculation = createAsyncThunk(

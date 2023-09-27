@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 // Configuración de la URL base para las solicitudes Axios
-axios.defaults.baseURL = 'https://deploy-preview-2--rad-vacherin-853b41.netlify.app';
+axios.defaults.baseURL = 'https://rad-vacherin-853b41.netlify.app';
 
 // Función para configurar el encabezado de autorización con el token
 const setAuthHeader = (token) => {
