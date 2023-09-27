@@ -56,7 +56,7 @@ const LoginPage = () => {
       setIsLoading(true); // Activar el spinner al iniciar sesión
       try {
         const response = await axios.post(
-          'http://localhost:3001/api/users/login',
+          'https://rad-vacherin-853b41.netlify.app/api/users/login',
           {
             email,
             password,

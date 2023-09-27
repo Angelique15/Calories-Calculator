@@ -55,7 +55,7 @@ const RegisterPage = () => {
     if (isValid) {
       try {
         // Realiza una solicitud POST al servidor para registrar al usuario
-        const response = await axios.post('http://localhost:3001/api/users/signup', {
+        const response = await axios.post('https://rad-vacherin-853b41.netlify.app/api/users/signup', {
           username,
           email,
           password,
