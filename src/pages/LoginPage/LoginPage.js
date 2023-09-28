@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { login } from '../../redux/auth/operations';
 import { ContainerLogin } from './loginPage.styled';
+import { API_BASE_URL } from '../../helpers/config';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import Loader from 'components/Loader/spinnerApp';
@@ -55,8 +56,7 @@ const LoginPage = () => {
     if (validateFields()) { // Validar campos antes de enviar la solicitud
       setIsLoading(true); // Activar el spinner al iniciar sesión
       try {
-        const response = await axios.post(
-          'https://rad-vacherin-853b41.netlify.app/api/users/login',
+        const response = await axios.post(`${API_BASE_URL}/api/users/login`,
           {
             email,
             password,

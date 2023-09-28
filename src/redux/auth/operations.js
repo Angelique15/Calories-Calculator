@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE_URL } from '../../helpers/config';
 
-axios.defaults.baseURL = 'https://rad-vacherin-853b41.netlify.app';
+axios.defaults.baseURL = API_BASE_URL; // Configura la URL base de Axios
 axios.defaults.withCredentials = true;
 
 const token = {

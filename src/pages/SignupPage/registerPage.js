@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../redux/auth/operations';
 import { ContainerRegister, Title } from './registerPage.styled';
 import { toast } from 'react-toastify';
+import { API_BASE_URL } from '../../helpers/config';
 import axios from 'axios';
 import Loader from 'components/Loader/spinnerApp';
 
@@ -55,7 +56,7 @@ const RegisterPage = () => {
     if (isValid) {
       try {
         // Realiza una solicitud POST al servidor para registrar al usuario
-        const response = await axios.post('https://rad-vacherin-853b41.netlify.app/api/users/signup', {
+        const response = await axios.post(`${API_BASE_URL}/api/users/signup`, { // Utiliza la URL base para construir la URL completa
           username,
           email,
           password,

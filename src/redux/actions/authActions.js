@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { API_BASE_URL } from '../../helpers/config';
 
-// Configuración de la URL base para las solicitudes Axios
-axios.defaults.baseURL = 'https://rad-vacherin-853b41.netlify.app';
+axios.defaults.baseURL = API_BASE_URL; // Configura la URL base de Axios
 
 // Función para configurar el encabezado de autorización con el token
 const setAuthHeader = (token) => {

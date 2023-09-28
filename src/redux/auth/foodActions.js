@@ -1,11 +1,12 @@
 // redux/auth/foodActions.js
 import { setFoods } from './foodReducer';
+import { API_BASE_URL } from '../../helpers/config';
 
 import axios from 'axios';
 // Acción para cargar alimentos según el tipo de sangre
 export const loadFoodsByBloodType = (userBloodType) => async (dispatch) => {
     try {
-        const response = await axios.get(`https://rad-vacherin-853b41.netlify.app/api/allowed-foods/${userBloodType}`);
+        const response = await axios.get(`${API_BASE_URL}/api/allowed-foods/${userBloodType}`);
         const foods = response.data;
 
         // Despacha una acción para actualizar el estado con los alimentos

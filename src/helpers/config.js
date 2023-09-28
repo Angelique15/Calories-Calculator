@@ -1,0 +1,1 @@
+export const API_BASE_URL = 'https://rad-vacherin-853b41.netlify.app';
